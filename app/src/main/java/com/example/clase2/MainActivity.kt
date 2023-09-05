@@ -103,28 +103,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-//    private fun radioButton(){
-//        //evento para el RadioGroup
-//        var listaRadioButon = binding.rgContenedor
-//        var radioButon = listaRadioButon.getChildAt(1) as RadioButton
-//        listaRadioButon.check(radioButon.id)
-//
-//        //evento para el RadioButton:
-//        for(i in 0..<listaRadioButon.childCount){
-//            var radioButton = listaRadioButon.getChildAt(i) as RadioButton
-//            radioButton.setOnClickListener {
-//                when(radioButton.id){
-//                    R.id.rbAndroid ->
-//                         Toast.makeText(this, "Bienvenido a Android", Toast.LENGTH_SHORT).show()
-//
-//                    R.id.rbiOs ->
-//                        Toast.makeText(this, "Bienvenido a iOS", Toast.LENGTH_SHORT).show()
-//                }
-//            }
-//        }
-//    }
-
     private fun radioButton(){
       binding.rgContenedor.setOnCheckedChangeListener { _, checkedId ->
           when(checkedId){
