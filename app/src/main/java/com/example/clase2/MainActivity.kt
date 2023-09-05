@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        //binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
         //toast()
         //snackBar()
         //textView()
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         //checkBox()
         //toggleButton()
         //switch()
-        //floatActionButton()
+        floatActionButton()
     }
 
     private fun toast(){
@@ -104,30 +104,39 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+//    private fun radioButton(){
+//        //evento para el RadioGroup
+//        var listaRadioButon = binding.rgContenedor
+//        var radioButon = listaRadioButon.getChildAt(1) as RadioButton
+//        listaRadioButon.check(radioButon.id)
+//
+//        //evento para el RadioButton:
+//        for(i in 0..<listaRadioButon.childCount){
+//            var radioButton = listaRadioButon.getChildAt(i) as RadioButton
+//            radioButton.setOnClickListener {
+//                when(radioButton.id){
+//                    R.id.rbAndroid ->
+//                         Toast.makeText(this, "Bienvenido a Android", Toast.LENGTH_SHORT).show()
+//
+//                    R.id.rbiOs ->
+//                        Toast.makeText(this, "Bienvenido a iOS", Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//        }
+//    }
+
     private fun radioButton(){
-        //evento para el RadioGroup
-        var listaRadioButon = binding.rgContenedor
-        var radioButon = listaRadioButon.getChildAt(1) as RadioButton
-        listaRadioButon.check(radioButon.id)
-
-        //evento para el RadioButton:
-        for(i in 0..<listaRadioButon.childCount){
-            var radioButton = listaRadioButon.getChildAt(i) as RadioButton
-            radioButton.setOnClickListener {
-                when(radioButton.id){
-                    R.id.rbAndroid ->
-                         Toast.makeText(this, "Bienvenido a Android", Toast.LENGTH_SHORT).show()
-
-                    R.id.rbiOs ->
-                        Toast.makeText(this, "Bienvenido a iOS", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
+      binding.rgContenedor.setOnCheckedChangeListener { _, checkedId ->
+          when(checkedId){
+              R.id.rbAndroid -> Toast.makeText(this, "Bienvenido a Android", Toast.LENGTH_SHORT).show()
+              R.id.rbiOs -> Toast.makeText(this, "Bienvenido a iOS", Toast.LENGTH_SHORT).show()
+          }
+      }
     }
 
     private fun checkBox(){
-        binding.cbOpcion1.setOnClickListener {
-            if(binding.cbOpcion1.isChecked){
+        binding.cbOpcion1.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked){
                 Toast.makeText(this, "Marcaste la opcion 1", Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this, "Desmarcado", Toast.LENGTH_SHORT).show()
