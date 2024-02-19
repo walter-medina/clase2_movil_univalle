@@ -173,7 +173,7 @@
             android:thumbTint="@color/orange"
             android:trackTint="@color/green"/>
 
-        <!-- Ejemplo floatActionButton desde la documentacion - con LinearLayout da error -->
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fbagregar"
             android:layout_width="wrap_content"
