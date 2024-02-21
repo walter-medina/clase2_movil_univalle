@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun floatActionButton() {
         binding.fbagregar.setOnClickListener{
-            Toast.makeText(this, "Se adicionó !!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Se adicionó", Toast.LENGTH_SHORT).show()
         }
     }
 
