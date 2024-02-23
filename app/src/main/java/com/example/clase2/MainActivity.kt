@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         //setContentView(R.layout.activity_main)
-        //toast()
+        toast()
         //snackBar()
         //textView()
         //editText()
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         //checkBox()
         //toggleButton()
         //switch()
-        floatActionButton()
+        //floatActionButton()
     }
 
     private fun toast(){
