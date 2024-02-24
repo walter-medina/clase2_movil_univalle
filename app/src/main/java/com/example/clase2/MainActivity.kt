@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         //setContentView(R.layout.activity_main)
         toast()
-        //snackBar()
+        snackBar()
         //textView()
         //editText()
         //autoCompleteTextView()
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun snackBar(){
+        val viewContainer:LinearLayout = findViewById(R.id.llContenedor)
         Snackbar.make(binding.llContenedor, "Hola mundo",Snackbar.LENGTH_SHORT).show()
     }
 
