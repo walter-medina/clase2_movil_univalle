@@ -23,10 +23,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         //setContentView(R.layout.activity_main)
-        toast()
-        snackBar()
-        //textView()
-        //editText()
+        //toast()
+        //snackBar()
+        textView()
+        editText()
         //autoCompleteTextView()
         //button()
         //chip()
@@ -49,16 +49,17 @@ class MainActivity : AppCompatActivity() {
     private fun textView(){
 
         //forma antigua para llamar a un componente de la vista
-        var tvTitulo:TextView = findViewById(R.id.tvTitulo)
-        tvTitulo.text = "Desarrollo de Aplicaciones"
-        //tvTitulo.text = getText(R.string.tv_new_titulo)
-        tvTitulo.setTextColor(Color.BLUE)
-        tvTitulo.textSize = 50f
+//        var tvTitulo:TextView = findViewById(R.id.tvTitulo)
+//        tvTitulo.text = "Desarrollo de Aplicaciones"
+//        //tvTitulo.text = getText(R.string.tv_new_titulo)
+//        tvTitulo.setTextColor(Color.BLUE)
+//        tvTitulo.textSize = 50f
 
 //        //usando binding:
-//        binding.tvTitulo.text = "titulo usando dataBindig"
-//        binding.tvTitulo.setTextColor(Color.RED)
-//        binding.tvTitulo.textSize = 35f
+        binding.tvTitulo.text = "Bienvenidos"
+        //binding.tvTitulo.setTextColor(Color.RED)
+        binding.tvTitulo.resources.getColor(R.color.black, null)
+        binding.tvTitulo.textSize = 35f
 //
 //        //usando funciones de alcance
 //        binding.tvTitulo.apply {
