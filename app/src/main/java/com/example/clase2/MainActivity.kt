@@ -21,20 +21,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
-        //setContentView(R.layout.activity_main)
-        //toast()
+        //binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        setContentView(R.layout.activity_main)
+        toast()
         //snackBar()
-        textView()
-        editText()
-        //autoCompleteTextView()
-        //button()
-        //chip()
-        //radioButton()
-        //checkBox()
-        //toggleButton()
-        //switch()
-        //floatActionButton()
+        //textView()
+//        editText()
+//        autoCompleteTextView()
+//        button()
+//        chip()
+//        radioButton()
+//        checkBox()
+//        toggleButton()
+//        switch()
+//        floatActionButton()
     }
 
     private fun toast(){
@@ -49,17 +49,17 @@ class MainActivity : AppCompatActivity() {
     private fun textView(){
 
         //forma antigua para llamar a un componente de la vista
-//        var tvTitulo:TextView = findViewById(R.id.tvTitulo)
-//        tvTitulo.text = "Desarrollo de Aplicaciones"
-//        //tvTitulo.text = getText(R.string.tv_new_titulo)
-//        tvTitulo.setTextColor(Color.BLUE)
-//        tvTitulo.textSize = 50f
+        var tvTitulo:TextView = findViewById(R.id.tvTitulo)
+        tvTitulo.text = "Desarrollo de Aplicaciones"
+        //tvTitulo.text = getText(R.string.tv_new_titulo)
+        tvTitulo.setTextColor(Color.BLUE)
+        tvTitulo.textSize = 50f
 
 //        //usando binding:
-        binding.tvTitulo.text = "Bienvenidos"
-        //binding.tvTitulo.setTextColor(Color.RED)
-        binding.tvTitulo.resources.getColor(R.color.black, null)
-        binding.tvTitulo.textSize = 35f
+//        binding.tvTitulo.text = "Bienvenidos"
+//        //binding.tvTitulo.setTextColor(Color.RED)
+//        binding.tvTitulo.resources.getColor(R.color.black, null)
+//        binding.tvTitulo.textSize = 35f
 //
 //        //usando funciones de alcance
 //        binding.tvTitulo.apply {
@@ -126,14 +126,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun toggleButton(){
-        binding.tbOpcion.setOnCheckedChangeListener { buttonView, isChecked ->
-            if(isChecked)  Toast.makeText(this, "Toogle Activado", Toast.LENGTH_SHORT).show()
+        binding.tbOpcion.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked)  Toast.makeText(this, "Toogle Activado", Toast.LENGTH_LONG).show()
             else  Toast.makeText(this, "Toogle Desactivado", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun switch(){
-        binding.swActivar.setOnCheckedChangeListener { buttonView, isChecked ->
+        binding.swActivar.setOnCheckedChangeListener { _, isChecked ->
             if(isChecked)  Toast.makeText(this, "switch  Activado", Toast.LENGTH_SHORT).show()
             else  Toast.makeText(this, "switch Desactivado", Toast.LENGTH_SHORT).show()
         }
