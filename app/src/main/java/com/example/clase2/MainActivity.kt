@@ -21,11 +21,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        //binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
-        setContentView(R.layout.activity_main)
-        toast()
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+        //toast()
         //snackBar()
-        //textView()
+         textView()
 //        editText()
 //        autoCompleteTextView()
 //        button()
@@ -34,34 +34,36 @@ class MainActivity : AppCompatActivity() {
 //        checkBox()
 //        toggleButton()
 //        switch()
-//        floatActionButton()
+        //floatActionButton()
     }
 
     private fun toast(){
-        Toast.makeText(this,"Hola mundo !!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"Hola mundo !!", Toast.LENGTH_LONG).show()
     }
 
     private fun snackBar(){
         val viewContainer:LinearLayout = findViewById(R.id.llContenedor)
-        Snackbar.make(binding.llContenedor, "Hola mundo",Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(viewContainer, "Hola estudiantes",Snackbar.LENGTH_LONG).show()
     }
 
     private fun textView(){
 
         //forma antigua para llamar a un componente de la vista
-        var tvTitulo:TextView = findViewById(R.id.tvTitulo)
-        tvTitulo.text = "Desarrollo de Aplicaciones"
-        //tvTitulo.text = getText(R.string.tv_new_titulo)
-        tvTitulo.setTextColor(Color.BLUE)
-        tvTitulo.textSize = 50f
+//        var tvTitulo:TextView = findViewById(R.id.tvTitulo)
+//        tvTitulo.text = "Desarrollo de Aplicaciones"
+//        //tvTitulo.text = getText(R.string.tv_new_titulo)
+//        tvTitulo.setTextColor(Color.BLUE)
+//        tvTitulo.textSize = 50f
 
-//        //usando binding:
-//        binding.tvTitulo.text = "Bienvenidos"
-//        //binding.tvTitulo.setTextColor(Color.RED)
-//        binding.tvTitulo.resources.getColor(R.color.black, null)
-//        binding.tvTitulo.textSize = 35f
-//
-//        //usando funciones de alcance
+
+
+        //usando binding:
+        binding.tvTitulo.text = "Bienvenidos"
+        //binding.tvTitulo.setTextColor(Color.RED)
+        binding.tvTitulo.resources.getColor(R.color.black, null)
+        binding.tvTitulo.textSize = 35f
+
+        //usando funciones de alcance
 //        binding.tvTitulo.apply {
 //            text = "hola mundo"
 //            setTextColor(Color.GRAY)
@@ -91,7 +93,7 @@ class MainActivity : AppCompatActivity() {
         //TODO: hacerle el evento con toast
         binding.btnIniciarSesion.setOnClickListener {
             val nombre = binding.etNombre.text
-            Toast.makeText(this, "Hola ${nombre}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, " ${nombre}", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -139,10 +141,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun floatActionButton() {
-        binding.fbagregar.setOnClickListener{
-            Toast.makeText(this, "Se adicionó", Toast.LENGTH_SHORT).show()
-        }
-    }
+//    private fun floatActionButton() {
+//        binding.fbagregar.setOnClickListener{
+//            Toast.makeText(this, "Se adicionó", Toast.LENGTH_SHORT).show()
+//        }
+//    }
 
 }

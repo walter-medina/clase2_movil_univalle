@@ -36,21 +36,23 @@
             android:background="@drawable/estilo_bg_redondo"
             android:padding="12dp"
             android:drawableStart="@drawable/icono_nombre"
-            android:drawablePadding="5dp"
+            android:drawablePadding="10dp"
             android:inputType="text"
             android:maxLength="10"/>
 
         <!-- Ejemplo AutoCompleteTextView -->
+
+        <!-- Ejemplo Button -->
         <AutoCompleteTextView
             android:id="@+id/atPais"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:padding="12dp"
             android:layout_gravity="center"
-            android:hint="Ingrese información"/>
+            android:layout_margin="5dp"
 
-        <!-- Ejemplo Button -->
+            android:hint="Ingrese información"
+            android:padding="12dp" />
+
         <Button
             android:id="@+id/btn_iniciarSesion"
             android:layout_width="match_parent"
@@ -85,6 +87,9 @@
             android:background="@color/transparent"/>
 
         <!-- Ejemplo ChipGroup y Chip personalizar usando style -->
+
+        <!-- Ejemplo RadioGroup y RadioButton -->
+
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/cgLenguajes"
             android:layout_width="match_parent"
@@ -92,28 +97,27 @@
             android:padding="10dp">
 
             <com.google.android.material.chip.Chip
+                style="@style/styleChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="kotlin"
-                app:chipIcon="@drawable/ic_kotlin"
-                style="@style/styleChip"/>
+                app:chipIcon="@drawable/ic_kotlin" />
 
             <com.google.android.material.chip.Chip
+                style="@style/styleChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="java"
-                app:chipIcon="@drawable/ic_java"
-                style="@style/styleChip"/>
+                app:chipIcon="@drawable/ic_java" />
 
             <com.google.android.material.chip.Chip
+                style="@style/styleChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="python"
-                style="@style/styleChip"/>
+                android:text="python" />
 
         </com.google.android.material.chip.ChipGroup>
 
-        <!-- Ejemplo RadioGroup y RadioButton -->
         <RadioGroup
             android:id="@+id/rgContenedor"
             android:layout_width="wrap_content"
@@ -152,34 +156,36 @@
             android:enabled="false" />
 
         <!-- Ejemplo TogleButton -->
+
+        <!-- Ejemplo Switch -->
         <ToggleButton
             android:id="@+id/tb_opcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textOn="SI"
+            android:checked="true"
             android:textOff="NO"
-            android:checked="true"/>
+            android:textOn="SI" />
 
-        <!-- Ejemplo Switch -->
+
+        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fbagregar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end|bottom"-->
+<!--            android:src="@drawable/ic_add"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"/>-->
+
+        <!-- Ejemplo floatActionButton usando una libreria externa-->
+
         <Switch
             android:id="@+id/swActivar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="activar"
             android:thumbTint="@color/orange"
-            android:trackTint="@color/green"/>
+            android:trackTint="@color/green" />
 
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fbagregar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:src="@drawable/ic_add"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"/>
-
-        <!-- Ejemplo floatActionButton usando una libreria externa-->
         <com.getbase.floatingactionbutton.AddFloatingActionButton
             android:id="@+id/float_btn"
             android:layout_width="wrap_content"
