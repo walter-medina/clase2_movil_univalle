@@ -1,15 +1,12 @@
 package com.example.clase2
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
-import android.widget.RadioButton
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
 import com.example.clase2.databinding.ActivityMainBinding
@@ -75,6 +72,11 @@ class MainActivity : AppCompatActivity() {
            var nombre = binding.etNombre.text
            if (nombre.isNotEmpty()){
                binding.tvTitulo.setTextColor(Color.GREEN)
+//               val color = ContextCompat.getColor(this, R.color.orange)
+//               binding.tvTitulo.setTextColor(color)
+               val nuevoIcono = ContextCompat.getDrawable(this, R.drawable.ic_java)
+               binding.etNombre.setCompoundDrawablesWithIntrinsicBounds(nuevoIcono, null, null, null)
+
            }else{
                binding.tvTitulo.setTextColor(Color.RED)
            }
