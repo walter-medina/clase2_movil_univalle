@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         //setContentView(R.layout.activity_main)
-        //toast()
+        toast()
         //snackBar()
-         textView()
+         //textView()
 //        editText()
 //        autoCompleteTextView()
 //        button()
@@ -39,32 +39,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun snackBar(){
-        val viewContainer:LinearLayout = findViewById(R.id.llContenedor)
+        val viewContainer:LinearLayout = binding.llContenedor
         Snackbar.make(viewContainer, "Hola estudiantes",Snackbar.LENGTH_LONG).show()
     }
 
     private fun textView(){
-
-        //forma antigua para llamar a un componente de la vista
-//        var tvTitulo:TextView = findViewById(R.id.tvTitulo)
-//        tvTitulo.text = "Desarrollo de Aplicaciones"
-//        //tvTitulo.text = getText(R.string.tv_new_titulo)
-//        tvTitulo.setTextColor(Color.BLUE)
-//        tvTitulo.textSize = 50f
-
-
-
         //usando binding:
         binding.tvTitulo.text = "Bienvenidos"
         //binding.tvTitulo.setTextColor(Color.RED)
         binding.tvTitulo.resources.getColor(R.color.black, null)
         binding.tvTitulo.textSize = 35f
-
-        //usando funciones de alcance
-//        binding.tvTitulo.apply {
-//            text = "hola mundo"
-//            setTextColor(Color.GRAY)
-//        }
     }
 
     private fun editText(){
@@ -143,10 +127,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun floatActionButton() {
-//        binding.fbagregar.setOnClickListener{
-//            Toast.makeText(this, "Se adicionó", Toast.LENGTH_SHORT).show()
-//        }
-//    }
+    private fun floatActionButton() {
+        binding.fbagregar.setOnClickListener{
+            Toast.makeText(this, "Se adicionó", Toast.LENGTH_SHORT).show()
+        }
+    }
 
 }

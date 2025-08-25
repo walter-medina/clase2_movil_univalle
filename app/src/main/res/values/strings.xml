@@ -2,6 +2,8 @@
     <string name="app_name">Clase2</string>
     <string name="tv_titulo">Desarrollo Móvil Univalle</string>
     <string name="tv_new_titulo">Desarrollo de Aplicaciones</string>
+    <string name="activar">activar</string>
+    <string name="button_float">button_float</string>
 
     <string-array name="listaPaises">
         <item>Albania</item>
