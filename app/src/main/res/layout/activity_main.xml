@@ -85,34 +85,7 @@
             android:background="@color/transparent"
             android:src="@drawable/ic_guardar" />
 
-        <!-- Ejemplo ChipGroup y Chip personalizar usando style -->
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/cgLenguajes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
 
-            <com.google.android.material.chip.Chip
-                style="@style/styleChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kotlin"
-                app:chipIcon="@drawable/ic_kotlin" />
-
-            <com.google.android.material.chip.Chip
-                style="@style/styleChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="java"
-                app:chipIcon="@drawable/ic_java" />
-
-            <com.google.android.material.chip.Chip
-                style="@style/styleChip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="python" />
-
-        </com.google.android.material.chip.ChipGroup>
         <!-- Ejemplo RadioGroup y RadioButton -->
         <RadioGroup
             android:id="@+id/rgContenedor"

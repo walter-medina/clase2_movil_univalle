@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
 //        editText()
 //        autoCompleteTextView()
 //        button()
-//        chip()
 //        radioButton()
 //        checkBox()
 //        toggleButton()
@@ -83,17 +82,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun chip(){
-        var listaLenguajes = binding.cgLenguajes
-
-        for(i in 0..<listaLenguajes.childCount){
-            var chip = listaLenguajes.getChildAt(i) as Chip
-            chip.setOnCloseIconClickListener { chip ->
-                listaLenguajes.removeView(chip)
-            }
-        }
-
-    }
     private fun radioButton(){
       binding.rgContenedor.setOnCheckedChangeListener { _, checkedId ->
           when(checkedId){
